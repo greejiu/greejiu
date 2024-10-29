@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>form - 회원가입</title>
+  <style>
+	body { background:#f0bafc}
+	h1 { text-align:center; }
+	ul { padding:0; }
+	li { list-style:none; height:40px; }
+	input { width:300px; padding:6px; border:none; border-bottom: 2px dotted lightgray; outline:none; }
+	
+	input:focus { background:#f0bafc }
+	input::placeholder { color: #c5c5c5; }
+	label{cursor:pointer;}
+	
+	.short {width:150px;}
+	
+	#container { width:600px; margin:auto; background:white; padding:30px; }
+	
+	li span { display:inline-block; width:130px; text-align:center; }
+	
+	/* Attribute selector(속성 선택자) */
+	input[type="button"], button  { width:auto; background:#f0bafc; border:none; font-size:12px; border-radius:6px; }
+	
+	button { padding:6px 20px; font-size:14px; }
+	
+	input[type="button"]:hover, button:hover { background:#e685fa; color:white }
+	input[type="radio"], input[type="checkbox"]{width:15px;}
+	
+	
+
+	
+  </style>
+ </head>
+ <body>
+	<h1><img src="img/logo_01.png" alt="사진"></h1>
+	
+	<div id="container">
+		<form method="post" action="">
+			<fieldset>
+				<legend>로그인 정보</legend>
+				<ul>
+					<li>
+						<span>아이디*</span>
+						<input type="text" maxlength="10" autofocus required>
+						<input type="button" value="중복 아이디 확인">
+					</li>
+					<li>
+						<span>비밀번호</span>
+						<input type="password" maxlength="8">
+					</li>
+					<li>
+						<span>비밀번호 확인</span>
+						<input type="password" maxlength="8">
+					</li>
+				</ul>
+			</fieldset>
+			
+			<fieldset>
+				<legend>가입자 정보</legend>
+				<ul>
+					<li>
+						<span>이름*</span>
+						<input type="text" maxlength="4" placeholder="실명입력" class="short" required>
+					</li>
+					<li>
+						<span>메일주소1</span>
+						<input type="email" maxlength="30" placeholder="이메일 직접입력">
+					</li>
+					<li>
+						<span>메일주소2</span>
+						<input type="text" maxlength="12" class="short">@
+						<select>
+							<option>=== 선택 ===</option>
+							<option value="naver">naver.com</option>
+							<option value="daum">daum.net</option>
+							<option value="gmail">gmail.com</option>
+							<option value="etc">직접입력</option>
+						</select>
+					</li>
+					<li>
+						<span>전화번호</span>
+						<input type="tell" maxlength="12" placeholder="숫자만 입력" class="short">
+					</li>
+					<li>
+						<span>핸드폰번호</span>
+						<input type="number" maxlength="12" placeholder="숫자만 입력" class="short">
+					</li>
+					<li>
+						<span>생년월일</span>
+						<input type="date" class="short">
+					</li>
+					 <li>
+						<span>성별</span>
+						<input type="radio" name="gender" value="man" id="man"> 
+						<input type="radio" name="gender" value="woman" id="woman">
+						<input type="radio" name="gender"  id="bi">
+						&nbsp; &nbsp; &nbsp; /
+						<label for="man">여자</label>
+						<label for="woman">남자</label>
+						<label for="bi">중성</label>
+					</li>
+					<li>
+						<span>우편번호</span>
+						<input type="search" placeholder="지번/도로명을 입력">
+					</li>
+					<li>
+						<span>관심분야</span>
+						<label><input type="checkbox" name="fav">주식</label>
+						<label><input type="checkbox" name="fav">부동산</label>
+						<label><input type="checkbox" name="fav">스포츠</label>
+						<label><input type="checkbox" name="fav">영화</label>
+						<label><input type="checkbox" name="fav">음악</label>
+						<label><input type="checkbox" name="fav">쇼핑</label>
+					</li>
+					<li>
+						<span>나이대</span>
+						<input type="range" min="0" max="10">
+					</li>
+					<li>
+						<span>사진 업로드</span>
+						<input type="file" style="border:none">
+					</li>
+					<li style="height:auto">
+						<span>가입동기</span>
+						<textarea rows="5" cols="45" style="resize:none"></textarea>
+					</li>
+				</ul>
+			</fieldset>
+			
+			<div style="text-align:center; padding-top:20px">
+				<button type="submit">확인</button>
+				<button type="reset">취소</button>
+			</div>
+		</form>
+	</div>
+ </body>
+</html>
